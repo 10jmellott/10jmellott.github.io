@@ -1,0 +1,11 @@
+.custom-row {
+    align-items: flex-start;
+}
+
+.custom-column {
+    margin-left: 15px;
+}
+
+#profile-picture {
+    border-radius: 10px;
+}

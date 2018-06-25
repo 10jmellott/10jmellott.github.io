@@ -7,7 +7,7 @@ html, body {
 
 .body-content {
     z-index: 1;
-    margin-top: 12vh;
+    margin-top: 8%;
     margin-left: 10vw;
     margin-right: 10vw;
 }
@@ -44,21 +44,56 @@ a.navchild:hover {
     height: 4vw;
 }
 
+/* Grid Layout Helper for Flexbox */
+.custom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.custom-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h2 {
+    font-size: 2vw;
+    text-decoration: underline;
+}
+
+li {
+    font-size: 1.3vw;
+}
+
 /* Handle Mobile */
-@media(max-width:640px){
+@media(max-width:1024px) {
     .body-content {
-        margin-top: 6vh;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .navbar {
-        margin-top: 2vh;
-        margin-left: 2vw;
-        margin-right: 2vw;
+        margin-top: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: rgba(18, 18, 26);
     }
 
     a.navchild {
+        font-size: 1em;
+    }
+
+    .custom-row {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    li {
         font-size: 1em;
     }
 }
