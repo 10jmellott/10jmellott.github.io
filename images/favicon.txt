@@ -1,0 +1,7 @@
+Favicon created on https://favicon.io
+Text: JM
+Shape: Rounded
+Font Family: Catamaran
+Font Size: 97
+Font Color: 245 245 245
+Background Color: 18 18 26
