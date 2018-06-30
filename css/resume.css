@@ -1,3 +1,17 @@
 #skills {
     width: 20vw;
 }
+
+.custom-column {
+    margin: 0px 10px;
+}
+
+@media(max-width:1024px) {
+    #skills {
+        width: 80vw;
+    }
+
+    .custom-column {
+        margin: 4px 0px;
+    }
+}

@@ -29,8 +29,8 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 
 
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 80%;">
-    <span class="progress-bar-label">WPF</span>
+  <div class="progress-bar" role="progressbar" style="width: 90%;">
+    <span class="progress-bar-label">C#</span>
   </div>
 </div>
 
@@ -41,8 +41,8 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 </div>
 
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 90%;">
-    <span class="progress-bar-label">C#</span>
+  <div class="progress-bar" role="progressbar" style="width: 80%;">
+    <span class="progress-bar-label">WPF</span>
   </div>
 </div>
 
