@@ -38,4 +38,9 @@ h3.subtitle {
     h3.subtitle {
         font-size: 20px;
     }
+
+    #home-root {
+        top: 15%;
+        left: 30%;
+    }
 }

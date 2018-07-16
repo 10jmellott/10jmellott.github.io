@@ -10,7 +10,8 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 ## Work Experience
 * AccuWeather (5 years)
     * TV Systems
-* Applied Research Laboratory (1 year Internship)
+* Applied Research Laboratory (1 year)
+  * Internship
 * OneGeek, Inc. (3 years)
     * Technical Computer Repair
 

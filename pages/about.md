@@ -5,7 +5,7 @@ custom_css: <link rel="stylesheet" href="/css/about.css" />
 ---
 
 <div class="custom-row">
-<div class="custom-column" markdown="1">
+<div class="custom-column">
 
 <img id="profile-picture" src="https://avatars3.githubusercontent.com/u/5950718?s=460&v=4">
 

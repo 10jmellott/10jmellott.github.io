@@ -12,5 +12,5 @@ custom_css: <link rel="stylesheet" href="/css/index.css" />
     <h3 class="subtitle">SOFTWARE DEVELOPER</h3>
 </div>
 
-<script src="/lib/p5/dist/p5.min.js"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>        
 <script src="/js/home.js"></script>
