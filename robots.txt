@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://10jmellott.github.io/sitemap.xml
