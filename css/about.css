@@ -11,3 +11,7 @@
     object-fit: contain;
     max-width: 100%;
 }
+
+blockquote {
+    max-width: 768px;
+}

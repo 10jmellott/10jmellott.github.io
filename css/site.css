@@ -1,8 +1,8 @@
 /* Shared Layout */
 html, body {
     color: whitesmoke;
-    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;    
-    background: rgb(18, 18, 26);    
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    background: rgb(18, 18, 26);
 }
 
 .body-content {
