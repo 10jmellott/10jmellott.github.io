@@ -14,15 +14,16 @@ custom_css: <link rel="stylesheet" href="/css/about.css" />
 
 # Joshua Mellott-Lillie
 
-> I am a software developer currently working at [AccuWeather](https://www.accuweather.com/).  
-> I have been working in WPF and .NET for the last several years while at AccuWeather. This work has been
-> focused on application development for an interactive touchscreen weather system.  
-> In my spare time I enjoy tinkering with micro-electronics, namely [Arduino](https://www.arduino.cc/en/Guide/Introduction) 
+> I am a software engineer currently working at [AccuWeather](https://www.accuweather.com/).
+> I have been working on the consumer website, www.accuweather.com for the last several year. This work is primarily
+> focused on developing backend hookups to AccuWeather's REST API in the Asp.NET core backend and building out UI to
+> display that information to our users.
+> In my spare time I enjoy tinkering with micro-electronics, namely [Arduino](https://www.arduino.cc/en/Guide/Introduction)
 > as well as working out mathematical problems on [Project Euler](https://projecteuler.net/).
 
 
 ## Contact
-#### 717.891.3729  
+#### 717.891.3729
 #### [10jmellott@gmail.com](mailto:10jmellott@gmail.com)
 
 </div>
