@@ -33,14 +33,14 @@ class Tree {
 		{
 			rotate(this.angle);
 		}
-		
+
 		strokeWeight(this.length / 10);
 		stroke(193, 154, 107);
 		line(0, 0, 0, -this.length);
-		
+
 		if (this.children != null)
 		{
-            // Prevents branch to branch seaming 
+            // Prevents branch to branch seaming
             translate(0, -this.length + this.length / 20);
 
 			this.children[0].draw(t);
@@ -54,7 +54,7 @@ class Tree {
 			fill(75, 100, 75, 120);
 			ellipse(0, 0, this.length * 2, this.length * 2);
 		}
-        
+
         pop();
     }
 }
@@ -69,11 +69,11 @@ function setup() {
     t = random(50);
     tree.branch(8);
 }
-  
+
 function draw() {
     background(18, 18, 26);
     t += 0.005;
-    
+
     push();
     translate(width / 4, height);
     tree.draw(t);

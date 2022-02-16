@@ -9,8 +9,10 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 
 ## Work Experience
 
+* Manager, Web Technology · AccuWeather, Inc
+  * July 2021 - Present
 * Software Engineer III · Web Developer · AccuWeather, Inc
-  * May 2018 - Present
+  * May 2018 - July 2021
 * Software Engineer · TV Developer · AccuWeather, Inc
   * Feb 2013 - May 2018
 * Software Engineer · Intern · Applied Research Laboratory
@@ -73,7 +75,7 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 </div>
 
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 30%;">
+  <div class="progress-bar" role="progressbar" style="width: 40%;">
     <span class="progress-bar-label">Python</span>
   </div>
 </div>
