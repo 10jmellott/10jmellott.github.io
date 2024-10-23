@@ -1,0 +1,20 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		".editorconfig": true,
+		".prettierignore": true,
+		"prettier.config.js": true,
+		".stylelint*": true,
+		"eslint*": true,
+		"pnpm-lock.yaml": true,
+		".gitattributes": true,
+		".gitignore": true,
+		".gitconfig": true,
+		"tsconfig*.json": true,
+	}
+}

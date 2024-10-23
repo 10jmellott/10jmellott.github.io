@@ -1,0 +1,37 @@
+{
+	"name": "10jmellott.github.io",
+	"private": true,
+	"version": "2.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --port 8086",
+		"build": "vue-tsc -b && vite build",
+		"preview": "vite preview",
+		"lint": "npm run prettier && npm run eslint && npm run stylelint",
+		"eslint": "eslint **/*.{css,js,vue} --fix",
+		"stylelint": "stylelint **/*.{css,vue} --fix",
+		"prettier": "prettier . --write"
+	},
+	"dependencies": {
+		"vue": "^3.5.10"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.1.4",
+		"typescript": "^5.5.3",
+		"vite": "^5.4.8",
+		"vue-tsc": "^2.1.6"
+	},
+	"optionalDependencies": {
+		"@eslint/js": "^9.13.0",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-vue": "^9.29.1",
+		"globals": "^15.11.0",
+		"prettier": "^3.3.3",
+		"stylelint": "^16.10.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^36.0.1",
+		"stylelint-config-standard-vue": "^1.0.0",
+		"typescript-eslint": "^8.11.0"
+	}
+}
