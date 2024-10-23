@@ -6,14 +6,14 @@ const config = {
 	trailingComma: 'es5',
 	tabWidth: 4,
 	useTabs: true,
-	semi: false,
+	semi: true,
 	singleQuote: true,
 	endOfLine: 'lf',
 	arrowParens: 'always',
 	htmlWhitespaceSensitivity: 'css',
 	vueIndentScriptAndStyle: true,
 	singleAttributePerLine: true,
-	bracketSameLine: true,
-}
+	bracketSameLine: false,
+};
 
-export default config
+export default config;

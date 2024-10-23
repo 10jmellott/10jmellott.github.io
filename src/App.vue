@@ -1,42 +1,73 @@
 <script setup lang="ts">
-	import HelloWorld from './components/HelloWorld.vue'
+	import Placeholder from './components/Placeholder.vue';
 </script>
 
 <template>
-	<div>
-		<a
-			href="https://vitejs.dev"
-			target="_blank">
-			<img
-				src="/vite.svg"
-				class="logo"
-				alt="Vite logo" />
-		</a>
-		<a
-			href="https://vuejs.org/"
-			target="_blank">
-			<img
-				src="./assets/vue.svg"
-				class="logo vue"
-				alt="Vue logo" />
-		</a>
+	<div class="grid-layout">
+		<Placeholder class="module navigation">Navigation</Placeholder>
+		<Placeholder class="module welcome">Welcome</Placeholder>
+		<Placeholder class="module socials">Socials</Placeholder>
+		<Placeholder class="module experience">Latest Experience</Placeholder>
+		<Placeholder class="module skills">Skills</Placeholder>
+		<Placeholder class="module projects">Latest Project</Placeholder>
+		<Placeholder class="module education">Education</Placeholder>
+		<Placeholder class="module weather">Weather Module</Placeholder>
+		<Placeholder class="module footer">Footer</Placeholder>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-	.logo {
-		height: 6em;
-		padding: 1.5em;
-		will-change: filter;
-		transition: filter 300ms;
-	}
+	.grid-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: var(--padding);
+		grid-template-areas:
+			'navigation navigation navigation'
+			'welcome welcome socials'
+			'welcome welcome experience'
+			'skills projects projects'
+			'skills projects projects'
+			'education education weather'
+			'footer footer footer';
 
-	.logo:hover {
-		filter: drop-shadow(0 0 2em #646cffaa);
-	}
+		.module {
+			text-align: center;
+		}
 
-	.logo.vue:hover {
-		filter: drop-shadow(0 0 2em #42b883aa);
+		.navigation {
+			grid-area: navigation;
+		}
+
+		.welcome {
+			grid-area: welcome;
+		}
+
+		.socials {
+			grid-area: socials;
+		}
+
+		.experience {
+			grid-area: experience;
+		}
+
+		.skills {
+			grid-area: skills;
+		}
+
+		.projects {
+			grid-area: projects;
+		}
+
+		.education {
+			grid-area: education;
+		}
+
+		.weather {
+			grid-area: weather;
+		}
+
+		.footer {
+			grid-area: footer;
+		}
 	}
 </style>

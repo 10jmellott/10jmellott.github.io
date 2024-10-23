@@ -8,13 +8,42 @@
 		"**/Thumbs.db": true,
 		".editorconfig": true,
 		".prettierignore": true,
-		"prettier.config.js": true,
-		".stylelint*": true,
-		"eslint*": true,
+		"prettier.config.js": false,
+		".stylelint*": false,
+		"eslint*": false,
 		"pnpm-lock.yaml": true,
 		".gitattributes": true,
 		".gitignore": true,
 		".gitconfig": true,
-		"tsconfig*.json": true,
-	}
+		"tsconfig*.json": true
+	},
+	"prettier.configPath": "prettier.config.js",
+	"prettier.ignorePath": ".prettierignore",
+	"eslint.probe": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"json",
+		"jsonc"
+	],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"json",
+		"jsonc"
+	],
+	"stylelint.validate": ["css", "vue"],
+	"stylelint.configFile": ".stylelintrc.json",
+	"eslint.format.enable": true,
+	"stylelint.packageManager": "pnpm",
+	"editor.codeActionsOnSave": [
+		"source.formatDocument",
+		"source.fixAll.stylelint",
+		"source.fixAll.eslint"
+	]
 }
