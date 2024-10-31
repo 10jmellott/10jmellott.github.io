@@ -1,73 +1,189 @@
 <script setup lang="ts">
-	import Placeholder from './components/Placeholder.vue';
+	import Header from './components/Header.vue';
+	import TitleCard from './components/TitleCard.vue';
 </script>
 
 <template>
 	<div class="grid-layout">
-		<Placeholder class="module navigation">Navigation</Placeholder>
-		<Placeholder class="module welcome">Welcome</Placeholder>
-		<Placeholder class="module socials">Socials</Placeholder>
-		<Placeholder class="module experience">Latest Experience</Placeholder>
-		<Placeholder class="module skills">Skills</Placeholder>
-		<Placeholder class="module projects">Latest Project</Placeholder>
-		<Placeholder class="module education">Education</Placeholder>
-		<Placeholder class="module weather">Weather Module</Placeholder>
-		<Placeholder class="module footer">Footer</Placeholder>
+		<Header class="module header" />
+		<TitleCard
+			class="module welcome"
+			title="Welcome"
+		>
+			<p>
+				I am <b>Joshua Mellott-Lillie</b>, the
+				<b>Director of Web Technology</b> at AccuWeather. With over a
+				decade of experience in development, I have a passion for
+				creating beautiful, functional, and accessible web applications.
+			</p>
+		</TitleCard>
+		<TitleCard
+			class="module socials"
+			title="Socials"
+		>
+			<p>
+				You can find me on
+				<a
+					href="https://www.linkedin.com/in/joshuamellottlillie/"
+					target="_blank"
+					>LinkedIn</a
+				>
+				and
+				<a
+					href="https://www.github.com/joshuamlillie"
+					target="_blank"
+					>GitHub</a
+				>.
+			</p>
+		</TitleCard>
+		<TitleCard
+			class="module experience"
+			title="Experience"
+			subtitle="Director, Web Technology"
+		>
+			<p>Details about my professional experience.</p>
+		</TitleCard>
+		<TitleCard
+			class="module skills"
+			title="Skills"
+		>
+			<p>Details about my technical skills.</p>
+		</TitleCard>
+		<TitleCard
+			class="module projects"
+			title="Latest Project"
+		>
+			<p>Details about my recent projects.</p>
+		</TitleCard>
+		<TitleCard
+			class="module education"
+			title="Education"
+		>
+			<p>Details about my educational background.</p>
+		</TitleCard>
+		<TitleCard
+			class="module weather"
+			title="Weather"
+		>
+			<p>Details about the weather module.</p>
+		</TitleCard>
+		<TitleCard
+			class="module footer"
+			title="Footer"
+		>
+			<p>Footer information.</p>
+		</TitleCard>
 	</div>
 </template>
 
 <style scoped>
+	@keyframes fade-in-slide-up {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.grid-layout {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: var(--padding);
 		grid-template-areas:
-			'navigation navigation navigation'
+			'header header header'
 			'welcome welcome socials'
 			'welcome welcome experience'
 			'skills projects projects'
 			'skills projects projects'
 			'education education weather'
 			'footer footer footer';
+		position: relative;
+	}
 
-		.module {
-			text-align: center;
-		}
+	.module {
+		opacity: 0;
+		animation: fade-in-slide-up 1s forwards;
 
-		.navigation {
-			grid-area: navigation;
+		p {
+			line-height: normal;
 		}
+	}
 
-		.welcome {
-			grid-area: welcome;
-		}
+	.module:nth-child(1) {
+		animation-delay: 0s;
+	}
 
-		.socials {
-			grid-area: socials;
-		}
+	.module:nth-child(2) {
+		animation-delay: 0.25s;
+	}
 
-		.experience {
-			grid-area: experience;
-		}
+	.module:nth-child(3) {
+		animation-delay: 0.5s;
+	}
 
-		.skills {
-			grid-area: skills;
-		}
+	.module:nth-child(4) {
+		animation-delay: 0.75s;
+	}
 
-		.projects {
-			grid-area: projects;
-		}
+	.module:nth-child(5) {
+		animation-delay: 1s;
+	}
 
-		.education {
-			grid-area: education;
-		}
+	.module:nth-child(6) {
+		animation-delay: 1.25s;
+	}
 
-		.weather {
-			grid-area: weather;
-		}
+	.module:nth-child(7) {
+		animation-delay: 1.5s;
+	}
 
-		.footer {
-			grid-area: footer;
-		}
+	.module:nth-child(8) {
+		animation-delay: 1.75s;
+	}
+
+	.module:nth-child(9) {
+		animation-delay: 2s;
+	}
+
+	.header {
+		grid-area: header;
+		position: sticky;
+		top: 0;
+	}
+
+	.welcome {
+		grid-area: welcome;
+	}
+
+	.socials {
+		grid-area: socials;
+	}
+
+	.experience {
+		grid-area: experience;
+	}
+
+	.skills {
+		grid-area: skills;
+	}
+
+	.projects {
+		grid-area: projects;
+	}
+
+	.education {
+		grid-area: education;
+	}
+
+	.weather {
+		grid-area: weather;
+	}
+
+	.footer {
+		grid-area: footer;
 	}
 </style>

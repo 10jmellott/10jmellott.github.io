@@ -1,0 +1,31 @@
+.card {
+	padding: var(--padding);
+	border: 2px solid transparent;
+	box-sizing: content-box;
+	border-radius: var(--border-radius);
+	background-color: var(--card-background);
+	box-shadow: 0 4px 8px rgb(0 0 0 / 40%);
+	transition: border-color 0.2s ease;
+
+	.title {
+		font-size: 1.25rem;
+		opacity: 0.5;
+		letter-spacing: 0.25rem;
+		text-transform: lowercase;
+	}
+
+	.subtitle {
+		font-size: 0.75rem;
+		opacity: 0.75;
+	}
+
+	&:hover {
+		border: 2px solid var(--accent2);
+	}
+}
+
+a,
+b {
+	color: var(--accent);
+	font-weight: bold;
+}

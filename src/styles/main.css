@@ -1,13 +1,18 @@
 @import url('reset.css');
+@import url('atoms.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
 	/* Colors */
-	--background: #403d39;
-	--foreground: #fffcf2;
-	--accent: #eb5e28;
-	--foreground-alt: #ccc5b9;
-	--background-alt: #252422;
+	--background: #121113;
+	--foreground: #f7f7f2;
+	--accent: #899878;
+	--accent2: #f06543;
+	--foreground-alt: #e4e6c3;
+	--background-alt: #222725;
+
+	/* Theme */
+	--card-background: var(--background-alt);
 
 	/* Font */
 	--font-family: 'Roboto Mono', sans-serif;
@@ -28,4 +33,6 @@ body {
 
 #app {
 	padding: var(--padding);
+	max-width: 1024px;
+	margin: 0 auto;
 }
