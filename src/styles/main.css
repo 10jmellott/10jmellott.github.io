@@ -19,7 +19,10 @@
 
 	/* Spacing */
 	--padding: 32px;
-	--border-radius: 8px;
+	--border-radius: 12px;
+
+	/* Transition */
+	--transition: 0.2s ease;
 }
 
 body {
@@ -33,6 +36,10 @@ body {
 
 #app {
 	padding: var(--padding);
-	max-width: 1024px;
+	max-width: 1280px;
 	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
 }

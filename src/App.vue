@@ -1,53 +1,19 @@
 <script setup lang="ts">
 	import Header from './components/Header.vue';
+	import Experience from './components/modules/Experience.vue';
+	import Welcome from './components/modules/Welcome.vue';
 	import TitleCard from './components/TitleCard.vue';
 </script>
 
 <template>
 	<div class="grid-layout">
 		<Header class="module header" />
+		<Welcome class="module welcome" />
 		<TitleCard
-			class="module welcome"
-			title="Welcome"
+			class="module weather"
+			title="Weather"
 		>
-			<p>
-				I am <b>Joshua Mellott-Lillie</b>, the
-				<b>Director of Web Technology</b> at AccuWeather. With over a
-				decade of experience in development, I have a passion for
-				creating beautiful, functional, and accessible web applications.
-			</p>
-		</TitleCard>
-		<TitleCard
-			class="module socials"
-			title="Socials"
-		>
-			<p>
-				You can find me on
-				<a
-					href="https://www.linkedin.com/in/joshuamellottlillie/"
-					target="_blank"
-					>LinkedIn</a
-				>
-				and
-				<a
-					href="https://www.github.com/joshuamlillie"
-					target="_blank"
-					>GitHub</a
-				>.
-			</p>
-		</TitleCard>
-		<TitleCard
-			class="module experience"
-			title="Experience"
-			subtitle="Director, Web Technology"
-		>
-			<p>Details about my professional experience.</p>
-		</TitleCard>
-		<TitleCard
-			class="module skills"
-			title="Skills"
-		>
-			<p>Details about my technical skills.</p>
+			<p>78&deg; and Sunny</p>
 		</TitleCard>
 		<TitleCard
 			class="module projects"
@@ -62,11 +28,12 @@
 			<p>Details about my educational background.</p>
 		</TitleCard>
 		<TitleCard
-			class="module weather"
-			title="Weather"
+			class="module skills"
+			title="Skills"
 		>
-			<p>Details about the weather module.</p>
+			<p>Skill Word Map</p>
 		</TitleCard>
+		<Experience class="module experience" />
 		<TitleCard
 			class="module footer"
 			title="Footer"
@@ -95,11 +62,9 @@
 		grid-gap: var(--padding);
 		grid-template-areas:
 			'header header header'
-			'welcome welcome socials'
-			'welcome welcome experience'
-			'skills projects projects'
-			'skills projects projects'
-			'education education weather'
+			'welcome welcome weather'
+			'education experience experience'
+			'projects projects skills'
 			'footer footer footer';
 		position: relative;
 	}
@@ -151,8 +116,6 @@
 
 	.header {
 		grid-area: header;
-		position: sticky;
-		top: 0;
 	}
 
 	.welcome {

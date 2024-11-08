@@ -34,12 +34,12 @@
 	header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		gap: var(--padding);
 
 		nav {
 			display: flex;
 			gap: var(--padding);
+			margin-left: auto;
 		}
 	}
 </style>

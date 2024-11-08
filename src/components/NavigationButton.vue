@@ -34,7 +34,7 @@
 		gap: 16px;
 		font-size: 1.5rem;
 		cursor: pointer;
-		transition: color 0.2s;
+		transition: color var(--transition);
 
 		p {
 			font-size: 0.8rem;
@@ -49,7 +49,7 @@
 				color: var(--foreground);
 				border-radius: 16px;
 				padding: 4px 8px;
-				transition: background-color 0.2s;
+				transition: background-color var(--transition);
 			}
 
 			&:hover {

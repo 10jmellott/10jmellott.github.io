@@ -1,0 +1,165 @@
+<template>
+	<TitleCard
+		title="Experience"
+		:subtitle="subtitle"
+	>
+		<div class="experience-module">
+			<div
+				v-for="(job, index) in career"
+				:key="index"
+				class="company"
+			>
+				<div class="company-title">
+					<a
+						:href="job.companyLink"
+						target="_blank"
+						class="company-link"
+						>{{ job.company }}
+					</a>
+					<p class="subtitle">
+						{{ formatDateRange(job.start, job.end) }} ({{
+							formatDuration(job.start, job.end)
+						}})
+					</p>
+				</div>
+
+				<div class="roles">
+					<div
+						v-for="(role, roleIndex) in career[index]
+							? job.roles
+							: [job.roles[0]]"
+						:key="roleIndex"
+						class="role-entry"
+					>
+						<p class="subtitle">
+							{{ formatDateRange(role.start, role.end) }} ({{
+								formatDuration(role.start, role.end)
+							}})
+						</p>
+						<p class="role">
+							{{ role.title }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</TitleCard>
+</template>
+
+<script setup lang="ts">
+	import TitleCard from '../TitleCard.vue';
+
+	const career = [
+		{
+			company: 'AccuWeather',
+			companyLink: 'https://www.accuweather.com/',
+			start: new Date(2014, 2),
+			end: null,
+			roles: [
+				{
+					title: 'Director, Web Technology',
+					start: new Date(2024, 4),
+					end: null,
+				},
+				{
+					title: 'Senior Manager, Web Technology',
+					start: new Date(2023, 4),
+					end: new Date(2024, 4),
+				},
+				{
+					title: 'Manager, Web Technology',
+					start: new Date(2021, 8),
+					end: new Date(2023, 4),
+				},
+				{
+					title: 'Developer, Web Technology',
+					start: new Date(2017, 9),
+					end: new Date(2021, 8),
+				},
+				{
+					title: 'Developer, Broadcast Applications',
+					start: new Date(2014, 2),
+					end: new Date(2017, 9),
+				},
+			],
+		},
+	];
+
+	const subtitle = `${career[0].roles[0].title} @ ${career[0].company}`;
+
+	function formatDate(date: Date): string {
+		return date.toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'short',
+		});
+	}
+
+	function formatDateRange(start: Date, end: Date | null): string {
+		const startDate = formatDate(start);
+		const endDate = end ? formatDate(end) : 'Present';
+		return `${startDate} - ${endDate}`;
+	}
+
+	function formatDuration(start: Date, end: Date | null): string {
+		if (!end) {
+			end = new Date();
+		}
+		const totalMonths =
+			(end.getFullYear() - start.getFullYear()) * 12 +
+			(end.getMonth() - start.getMonth());
+		const years = Math.floor(totalMonths / 12);
+		const months = totalMonths % 12;
+
+		let duration = '';
+		if (years > 0) {
+			duration += `${years} year${years > 1 ? 's' : ''}`;
+		}
+		if (months > 0) {
+			if (years > 0) {
+				duration += ' ';
+			}
+			duration += `${months} month${months > 1 ? 's' : ''}`;
+		}
+		return duration;
+	}
+</script>
+
+<style scoped>
+	.experience-module {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.company {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.company-title {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.roles {
+		margin-left: 12px;
+	}
+
+	.role-entry {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		border-left: 1px solid var(--accent2);
+		padding: 8px 12px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.role {
+		color: var(--accent);
+	}
+</style>
