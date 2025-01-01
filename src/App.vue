@@ -1,6 +1,8 @@
 <script setup lang="ts">
 	import Header from './components/Header.vue';
+	import Education from './components/modules/Education.vue';
 	import Experience from './components/modules/Experience.vue';
+	import Skills from './components/modules/Skills.vue';
 	import Welcome from './components/modules/Welcome.vue';
 	import TitleCard from './components/TitleCard.vue';
 </script>
@@ -11,34 +13,19 @@
 		<Welcome class="module welcome" />
 		<TitleCard
 			class="module weather"
-			title="Weather"
+			title="🌇Weather"
+			subtitle="New York, NY"
 		>
 			<p>78&deg; and Sunny</p>
 		</TitleCard>
-		<TitleCard
-			class="module projects"
-			title="Latest Project"
-		>
-			<p>Details about my recent projects.</p>
-		</TitleCard>
-		<TitleCard
-			class="module education"
-			title="Education"
-		>
-			<p>Details about my educational background.</p>
-		</TitleCard>
-		<TitleCard
-			class="module skills"
-			title="Skills"
-		>
-			<p>Skill Word Map</p>
-		</TitleCard>
+		<Education class="module education" />
+		<Skills class="module skills" />
 		<Experience class="module experience" />
 		<TitleCard
-			class="module footer"
-			title="Footer"
+			class="module projects"
+			title="🚧Latest Project"
 		>
-			<p>Footer information.</p>
+			<p>Details about my recent projects.</p>
 		</TitleCard>
 	</div>
 </template>
@@ -64,8 +51,8 @@
 			'header header header'
 			'welcome welcome weather'
 			'education experience experience'
-			'projects projects skills'
-			'footer footer footer';
+			'skills experience experience'
+			'projects projects projects';
 		position: relative;
 	}
 
@@ -144,9 +131,5 @@
 
 	.weather {
 		grid-area: weather;
-	}
-
-	.footer {
-		grid-area: footer;
 	}
 </style>
