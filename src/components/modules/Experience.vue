@@ -1,6 +1,6 @@
 <template>
 	<TitleCard
-		title="Experience"
+		title="💼Experience"
 		:subtitle="subtitle"
 	>
 		<div class="experience-module">
@@ -10,6 +10,12 @@
 				class="company"
 			>
 				<div class="company-title">
+					<img
+						:src="job.logo"
+						alt="Company Logo"
+						height="24"
+						width="24"
+					/>
 					<a
 						:href="job.companyLink"
 						target="_blank"
@@ -17,9 +23,7 @@
 						>{{ job.company }}
 					</a>
 					<p class="subtitle">
-						{{ formatDateRange(job.start, job.end) }} ({{
-							formatDuration(job.start, job.end)
-						}})
+						{{ formatDuration(job.start, job.end) }}
 					</p>
 				</div>
 
@@ -47,45 +51,47 @@
 </template>
 
 <script setup lang="ts">
+	import accuweather from '../../assets/accuweather.svg';
 	import TitleCard from '../TitleCard.vue';
 
 	const career = [
 		{
 			company: 'AccuWeather',
 			companyLink: 'https://www.accuweather.com/',
-			start: new Date(2014, 2),
+			logo: accuweather,
+			start: new Date(2014, 1),
 			end: null,
 			roles: [
 				{
 					title: 'Director, Web Technology',
-					start: new Date(2024, 4),
+					start: new Date(2024, 3),
 					end: null,
 				},
 				{
 					title: 'Senior Manager, Web Technology',
-					start: new Date(2023, 4),
-					end: new Date(2024, 4),
+					start: new Date(2023, 3),
+					end: new Date(2024, 3),
 				},
 				{
 					title: 'Manager, Web Technology',
-					start: new Date(2021, 8),
-					end: new Date(2023, 4),
+					start: new Date(2021, 7),
+					end: new Date(2023, 3),
 				},
 				{
 					title: 'Developer, Web Technology',
-					start: new Date(2017, 9),
-					end: new Date(2021, 8),
+					start: new Date(2017, 8),
+					end: new Date(2021, 7),
 				},
 				{
 					title: 'Developer, Broadcast Applications',
-					start: new Date(2014, 2),
-					end: new Date(2017, 9),
+					start: new Date(2014, 1),
+					end: new Date(2017, 8),
 				},
 			],
 		},
 	];
 
-	const subtitle = `${career[0].roles[0].title} @ ${career[0].company}`;
+	const subtitle = `${career[0].roles[0].title} at ${career[0].company}`;
 
 	function formatDate(date: Date): string {
 		return date.toLocaleDateString('en-US', {
@@ -144,19 +150,9 @@
 	}
 
 	.roles {
-		margin-left: 12px;
-	}
-
-	.role-entry {
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
-		border-left: 1px solid var(--accent2);
-		padding: 8px 12px;
-
-		&:last-child {
-			border-bottom: none;
-		}
+		gap: 8px;
 	}
 
 	.role {

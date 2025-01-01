@@ -14,7 +14,6 @@
 
 .title {
 	font-size: 1.25rem;
-	opacity: 0.5;
 	letter-spacing: 0.25rem;
 	text-transform: lowercase;
 }
@@ -22,10 +21,12 @@
 .subtitle {
 	font-size: 0.75rem;
 	opacity: 0.75;
+	font-style: italic;
 }
 
 a,
 b {
 	color: var(--accent2);
 	font-weight: bold;
+	line-height: 1;
 }

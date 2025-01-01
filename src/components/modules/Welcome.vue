@@ -1,5 +1,8 @@
 <template>
-	<TitleCard title="Welcome">
+	<TitleCard
+		title="👋Welcome"
+		subtitle="It's nice to meet you!"
+	>
 		<div class="welcome-module">
 			<div class="welcome-module-main">
 				<Profile />
@@ -13,17 +16,10 @@
 			</div>
 			<div class="buttons">
 				<Button
+					v-for="button in buttons"
+					:key="button.text"
+					v-bind="button"
 					class="button"
-					text="LinkedIn"
-					:icon="faLinkedin"
-					href="https://www.linkedin.com/in/joshua-mellott-lillie"
-					external
-				/>
-				<Button
-					class="button"
-					text="GitHub"
-					:icon="faGithub"
-					href="https://github.com/10jmellott"
 					external
 				/>
 			</div>
@@ -34,9 +30,28 @@
 <script setup lang="ts">
 	import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+	import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 	import TitleCard from '../TitleCard.vue';
 	import Button from '../core/Button.vue';
 	import Profile from '../core/Profile.vue';
+
+	const buttons = [
+		{
+			text: 'LinkedIn',
+			icon: faLinkedin,
+			href: 'https://www.linkedin.com/in/joshua-mellott-lillie',
+		},
+		{
+			text: 'GitHub',
+			icon: faGithub,
+			href: 'https://github.com/10jmellott',
+		},
+		{
+			text: 'Email',
+			icon: faEnvelope,
+			href: 'mailto:joshua@mellott-lillie.com',
+		},
+	];
 </script>
 
 <style scoped>
