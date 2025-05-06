@@ -9,14 +9,27 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 
 ## Work Experience
 
-* Manager, Web Technology · AccuWeather, Inc
-  * July 2021 - Present
-* Software Engineer III · Web Developer · AccuWeather, Inc
-  * May 2018 - July 2021
-* Software Engineer · TV Developer · AccuWeather, Inc
-  * Feb 2013 - May 2018
-* Software Engineer · Intern · Applied Research Laboratory
-  * Jan 2012 - Dev 2012
+### AccuWeather | February 2014 - Present (11 years)
+
+AccuWeather is a global leader in weather forecasting and services, providing superior accuracy for millions of users worldwide.
+
+**Director, Web Technology** | April 2024 - Present
+
+* Leads the web technology teams to deliver robust weather applications across multiple lines of business.
+* Oversees architectural design and development of interactive systems.
+* Collaborates with cross-functional teams to enhance application features.
+
+
+**Senior Manager, Web Technology** | August 2021 - April 2024
+
+* Streamlined workflow process to enhance productivity.
+* Developed and nurtured strategic relationships with stakeholders to enhance collaboration and drive successful project outcomes.
+
+**Software Developer, TV Systems & Web Technology** | February 2014 - August 2021
+
+* Developed novel interactive touchscreen applications for broadcast television.
+* Architected and built software that connected a myriad of weather services, from AccuWeather and others, for broadcast networks.
+* Successfully architected and deployed AccuWeather’s primary website, www.accuweather.com, as a cloud-based service
 
 </div>
 <div class="custom-column" markdown="1">
