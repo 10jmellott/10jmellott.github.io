@@ -9,23 +9,22 @@ custom_css: <link rel="stylesheet" href="/css/resume.css" />
 
 ## Work Experience
 
-### AccuWeather | February 2014 - Present (11 years)
+### AccuWeather · February 2014 - Present · 11 years
 
-AccuWeather is a global leader in weather forecasting and services, providing superior accuracy for millions of users worldwide.
+> AccuWeather is a global leader in weather forecasting and services, providing superior accuracy for millions of users worldwide.
 
-**Director, Web Technology** | April 2024 - Present
+**Director, Web Technology** · April 2024 - Present
 
 * Leads the web technology teams to deliver robust weather applications across multiple lines of business.
 * Oversees architectural design and development of interactive systems.
 * Collaborates with cross-functional teams to enhance application features.
 
-
-**Senior Manager, Web Technology** | August 2021 - April 2024
+**Senior Manager, Web Technology** · August 2021 - April 2024
 
 * Streamlined workflow process to enhance productivity.
 * Developed and nurtured strategic relationships with stakeholders to enhance collaboration and drive successful project outcomes.
 
-**Software Developer, TV Systems & Web Technology** | February 2014 - August 2021
+**Software Developer, TV Systems & Web Technology** · February 2014 - August 2021
 
 * Developed novel interactive touchscreen applications for broadcast television.
 * Architected and built software that connected a myriad of weather services, from AccuWeather and others, for broadcast networks.
