@@ -9,7 +9,7 @@ custom_css: <link rel="stylesheet" href="/css/index.css" />
 
 <div id="home-root">
     <h1 class="title">JOSHUA MELLOTT-LILLIE</h1>
-    <h3 class="subtitle">SR. DIRECTOR, WEB TECHNOLOGY</h3>
+    <h3 class="subtitle">DIRECTOR, WEB TECHNOLOGY</h3>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
