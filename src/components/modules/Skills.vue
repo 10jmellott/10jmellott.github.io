@@ -1,37 +1,19 @@
 <template>
-	<TitleCard
+	<PillModule
 		title="✨Skills"
-		subtitle="Free buzzwords here!"
-		class="skills-module"
-	>
-		<div class="container">
-			<p
-				v-for="skill in skills"
-				:key="skill.name"
-				:style="{ fontSize: `${skill.value}rem` }"
-			>
-				{{ skill.name }}
-			</p>
-		</div>
-	</TitleCard>
+		:pills
+	/>
 </template>
 
 <script setup lang="ts">
-	import TitleCard from '../TitleCard.vue';
-	const skills = [
-		{ name: 'Web Dev', value: 1.5 },
-		{ name: 'Desktop App Dev', value: 0.8 },
-		{ name: 'Architecture', value: 1.2 },
-		{ name: 'Profitable Engineering', value: 0.7 },
-		{ name: 'Developer Experience', value: 1 },
+	import PillModule from './PillModule.vue';
+	const pills = [
+		'Application Design',
+		'Innovation Strategies',
+		'Full Stack Development',
+		'UI/UX Design',
+		'Software Development Life Cycle (SDLC)',
+		'Cloud Computing',
+		'Project Management',
 	];
 </script>
-
-<style scoped>
-	.container {
-		display: flex;
-		gap: var(--padding);
-		flex-wrap: wrap;
-		align-items: center;
-	}
-</style>

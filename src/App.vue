@@ -2,31 +2,21 @@
 	import Header from './components/Header.vue';
 	import Education from './components/modules/Education.vue';
 	import Experience from './components/modules/Experience.vue';
+	import Interests from './components/modules/Interests.vue';
 	import Skills from './components/modules/Skills.vue';
+	import Technologies from './components/modules/Technologies.vue';
 	import Welcome from './components/modules/Welcome.vue';
-	import TitleCard from './components/TitleCard.vue';
 </script>
 
 <template>
 	<div class="grid-layout">
 		<Header class="module header" />
 		<Welcome class="module welcome" />
-		<TitleCard
-			class="module weather"
-			title="🌇Weather"
-			subtitle="New York, NY"
-		>
-			<p>78&deg; and Sunny</p>
-		</TitleCard>
 		<Education class="module education" />
-		<Skills class="module skills" />
+		<Technologies class="module technologies" />
 		<Experience class="module experience" />
-		<TitleCard
-			class="module projects"
-			title="🚧Latest Project"
-		>
-			<p>Details about my recent projects.</p>
-		</TitleCard>
+		<Skills class="module skills" />
+		<Interests class="module interests" />
 	</div>
 </template>
 
@@ -49,10 +39,10 @@
 		grid-gap: var(--padding);
 		grid-template-areas:
 			'header header header'
-			'welcome welcome weather'
+			'welcome welcome welcome'
 			'education experience experience'
-			'skills experience experience'
-			'projects projects projects';
+			'technologies experience experience'
+			'skills skills interests';
 		position: relative;
 	}
 
@@ -101,6 +91,18 @@
 		animation-delay: 2s;
 	}
 
+	.module:nth-child(10) {
+		animation-delay: 2.25s;
+	}
+
+	.module:nth-child(11) {
+		animation-delay: 2.5s;
+	}
+
+	.module:nth-child(12) {
+		animation-delay: 2.75s;
+	}
+
 	.header {
 		grid-area: header;
 	}
@@ -121,15 +123,15 @@
 		grid-area: skills;
 	}
 
-	.projects {
-		grid-area: projects;
+	.technologies {
+		grid-area: technologies;
+	}
+
+	.interests {
+		grid-area: interests;
 	}
 
 	.education {
 		grid-area: education;
-	}
-
-	.weather {
-		grid-area: weather;
 	}
 </style>
