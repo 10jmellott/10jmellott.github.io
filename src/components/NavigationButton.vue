@@ -1,28 +1,23 @@
 <template>
-	<div
+	<router-link
 		class="navigation-button"
-		:class="{ selected }"
+		activeClass="selected"
+		:to
 	>
 		<FontAwesomeIcon :icon />
 		<p>{{ text }}</p>
-	</div>
+	</router-link>
 </template>
 
 <script setup lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 	import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-	withDefaults(
-		defineProps<{
-			to: string;
-			selected?: boolean;
-			text: string;
-			icon: IconDefinition;
-		}>(),
-		{
-			selected: false,
-		}
-	);
+	defineProps<{
+		to: string;
+		text: string;
+		icon: IconDefinition;
+	}>();
 </script>
 
 <style scoped>
@@ -35,10 +30,14 @@
 		font-size: 1.5rem;
 		cursor: pointer;
 		transition: color var(--transition);
+		color: white;
+		font-weight: normal;
+		min-width: 80px;
 
 		p {
 			font-size: 0.8rem;
 			text-transform: lowercase;
+			padding: 4px 8px;
 		}
 
 		&.selected {

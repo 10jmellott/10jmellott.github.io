@@ -38,7 +38,7 @@
 
 		nav {
 			display: flex;
-			gap: var(--padding);
+			gap: 16px;
 			margin-left: auto;
 		}
 	}
