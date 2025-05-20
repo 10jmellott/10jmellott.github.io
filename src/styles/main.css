@@ -29,8 +29,7 @@
 	}
 }
 
-html,
-body {
+html {
 	height: 100%;
 }
 
@@ -48,9 +47,10 @@ body {
 	max-width: 1280px;
 	margin: 0 auto;
 	display: flex;
+	gap: var(--padding);
 	flex-direction: column;
-	height: calc(100% - 2 * var(--padding));
 	padding: var(--padding);
+	min-height: calc(100% - var(--padding) * 2);
 
 	main {
 		margin: auto;

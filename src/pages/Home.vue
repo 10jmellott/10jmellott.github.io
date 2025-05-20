@@ -2,6 +2,7 @@
 	import Education from '../components/modules/Education.vue';
 	import Experience from '../components/modules/Experience.vue';
 	import Interests from '../components/modules/Interests.vue';
+	import LatestProject from '../components/modules/LatestProject.vue';
 	import Skills from '../components/modules/Skills.vue';
 	import Technologies from '../components/modules/Technologies.vue';
 	import Welcome from '../components/modules/Welcome.vue';
@@ -10,11 +11,12 @@
 <template>
 	<div class="grid-layout">
 		<Welcome class="module welcome" />
-		<Interests class="module interests" />
+		<LatestProject class="module latest-project" />
 		<Education class="module education" />
-		<Technologies class="module technologies" />
 		<Experience class="module experience" />
+		<Technologies class="module technologies" />
 		<Skills class="module skills" />
+		<Interests class="module interests" />
 	</div>
 </template>
 
@@ -36,10 +38,10 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: var(--padding);
 		grid-template-areas:
-			'welcome welcome interests'
+			'welcome welcome latest-project'
 			'education experience experience'
 			'technologies experience experience'
-			'skills skills skills';
+			'skills skills interests';
 		position: relative;
 
 		/* Mobile */
@@ -47,11 +49,12 @@
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				'welcome'
-				'interests'
+				'latest-project'
 				'education'
 				'experience'
 				'technologies'
-				'skills';
+				'skills'
+				'interests';
 			grid-gap: var(--padding);
 		}
 	}
@@ -117,8 +120,8 @@
 		grid-area: welcome;
 	}
 
-	.socials {
-		grid-area: socials;
+	.latest-project {
+		grid-area: latest-project;
 	}
 
 	.experience {
