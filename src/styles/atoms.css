@@ -1,16 +1,11 @@
 .card {
 	padding: var(--padding);
-	border: 2px solid transparent;
 	box-sizing: content-box;
 	border-radius: var(--border-radius);
 	background-color: #222725cc;
 	backdrop-filter: blur(8px);
 	box-shadow: 0 4px 8px rgb(0 0 0 / 40%);
 	transition: border-color var(--transition);
-
-	&:hover {
-		border: 2px solid var(--accent);
-	}
 }
 
 .title {

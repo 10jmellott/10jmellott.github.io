@@ -4,11 +4,38 @@
 </script>
 
 <template>
-	<Header class="header" />
-	<main>
-		<router-view />
-	</main>
-	<TreeBackground />
+	<div class="app">
+		<Header class="header" />
+		<main>
+			<router-view />
+		</main>
+		<TreeBackground />
+	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100% - var(--padding) * 2);
+		max-width: 1280px;
+		height: 100%;
+		margin: 0 auto;
+
+		.header {
+			position: sticky;
+			padding: var(--padding);
+			top: 0;
+			z-index: 1;
+			background: var(--background);
+
+			@media (width <= 480px) {
+				padding: 0;
+			}
+		}
+
+		main {
+			padding: var(--padding);
+		}
+	}
+</style>

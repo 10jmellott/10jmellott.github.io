@@ -42,7 +42,6 @@
 			'education experience experience'
 			'technologies experience experience'
 			'skills skills interests';
-		position: relative;
 
 		/* Mobile */
 		@media (width <= 1024px) {

@@ -66,6 +66,10 @@
 			display: flex;
 			flex-direction: row;
 			gap: var(--padding);
+
+			@media (width <= 480px) {
+				flex-direction: column;
+			}
 		}
 
 		p {
@@ -77,6 +81,12 @@
 		.buttons {
 			display: flex;
 			gap: 8px;
+
+			@media (width <= 480px) {
+				flex-direction: column;
+				width: 100%;
+				gap: 8px;
+			}
 		}
 	}
 </style>
