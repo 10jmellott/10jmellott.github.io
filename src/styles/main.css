@@ -23,6 +23,10 @@
 
 	/* Transition */
 	--transition: 0.2s ease;
+
+	@media (width <= 768px) {
+		--padding: 12px;
+	}
 }
 
 html,
@@ -41,12 +45,12 @@ body {
 }
 
 #app {
-	padding: var(--padding);
 	max-width: 1280px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	height: calc(100% - 2 * var(--padding));
+	padding: var(--padding);
 
 	main {
 		margin: auto;

@@ -41,6 +41,19 @@
 			'technologies experience experience'
 			'skills skills skills';
 		position: relative;
+
+		/* Mobile */
+		@media (width <= 1024px) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'welcome'
+				'interests'
+				'education'
+				'experience'
+				'technologies'
+				'skills';
+			grid-gap: var(--padding);
+		}
 	}
 
 	.module {

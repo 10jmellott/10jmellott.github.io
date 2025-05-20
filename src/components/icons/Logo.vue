@@ -1,8 +1,8 @@
 <template>
 	<svg
-		width="100"
-		height="100"
-		viewBox="0 0 100 100"
+		width="80"
+		height="80"
+		viewBox="10 10 80 80"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<g clip-path="url(#clip0_2010_16)">

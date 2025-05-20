@@ -27,7 +27,7 @@
 		align-items: center;
 
 		p {
-			border-radius: 16px;
+			border-radius: 12px;
 			padding: 4px 12px;
 			font-size: 0.75rem;
 			text-transform: lowercase;
