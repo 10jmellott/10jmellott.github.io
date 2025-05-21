@@ -61,9 +61,9 @@
 		ref="gridRef"
 	>
 		<Welcome class="module welcome" />
-		<LatestProject class="module latest-project" />
-		<Education class="module education" />
 		<Experience class="module experience" />
+		<Education class="module education" />
+		<LatestProject class="module latest-project" />
 		<Technologies class="module technologies" />
 		<Skills class="module skills" />
 		<Interests class="module interests" />
@@ -148,12 +148,12 @@
 
 	.grid-layout {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 0.5fr 1fr;
 		grid-gap: var(--padding);
 		grid-template-areas:
-			'welcome welcome latest-project'
-			'education experience experience'
-			'technologies experience experience'
+			'welcome welcome experience'
+			'education latest-project latest-project'
+			'technologies latest-project latest-project'
 			'skills skills interests';
 		margin-top: calc(110vh - 128px);
 		margin-bottom: 10vh;
@@ -164,9 +164,9 @@
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				'welcome'
-				'latest-project'
-				'education'
 				'experience'
+				'education'
+				'latest-project'
 				'technologies'
 				'skills'
 				'interests';

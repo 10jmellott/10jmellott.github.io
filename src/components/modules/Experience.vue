@@ -1,7 +1,7 @@
 <template>
 	<TitleCard
 		title="💼Experience"
-		:subtitle="subtitle"
+		subtitle="Director, Web Technology at AccuWeather"
 	>
 		<div class="experience-module">
 			<div
@@ -26,85 +26,40 @@
 						{{ formatDuration(job.start, job.end) }}
 					</p>
 				</div>
-
-				<div class="roles">
-					<div
-						v-for="(role, roleIndex) in career[index]
-							? job.roles
-							: [job.roles[0]]"
-						:key="roleIndex"
-						class="role-entry"
-					>
-						<p class="subtitle">
-							{{ formatDateRange(role.start, role.end) }} ({{
-								formatDuration(role.start, role.end)
-							}})
-						</p>
-						<p class="role">
-							{{ role.title }}
-						</p>
-					</div>
-				</div>
+				<p>{{ job.description }}</p>
 			</div>
 		</div>
+		<RouterLink
+			class="experience-link"
+			to="/experience"
+		>
+			<Button
+				:icon="faBriefcase"
+				text="Dive Into My Experience"
+				href="/experience"
+			/>
+		</RouterLink>
 	</TitleCard>
 </template>
 
 <script setup lang="ts">
 	import accuweather from '../../assets/accuweather.svg';
 	import TitleCard from '../TitleCard.vue';
+	import { RouterLink } from 'vue-router';
+	import Button from '../core/Button.vue';
+	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 
 	const career = [
 		{
 			company: 'AccuWeather',
 			companyLink: 'https://www.accuweather.com/',
+			description:
+				'AccuWeather is a global leader in weather forecasting and services, providing superior accuracy for millions of users worldwide.',
 			logo: accuweather,
 			start: new Date(2014, 1),
 			end: null,
-			roles: [
-				{
-					title: 'Director, Web Technology',
-					start: new Date(2024, 3),
-					end: null,
-				},
-				{
-					title: 'Senior Manager, Web Technology',
-					start: new Date(2023, 3),
-					end: new Date(2024, 3),
-				},
-				{
-					title: 'Manager, Web Technology',
-					start: new Date(2021, 7),
-					end: new Date(2023, 3),
-				},
-				{
-					title: 'Developer, Web Technology',
-					start: new Date(2017, 8),
-					end: new Date(2021, 7),
-				},
-				{
-					title: 'Developer, Broadcast Applications',
-					start: new Date(2014, 1),
-					end: new Date(2017, 8),
-				},
-			],
 		},
 	];
-
-	const subtitle = `${career[0].roles[0].title} at ${career[0].company}`;
-
-	function formatDate(date: Date): string {
-		return date.toLocaleDateString('en-US', {
-			year: 'numeric',
-			month: 'short',
-		});
-	}
-
-	function formatDateRange(start: Date, end: Date | null): string {
-		const startDate = formatDate(start);
-		const endDate = end ? formatDate(end) : 'Present';
-		return `${startDate} - ${endDate}`;
-	}
 
 	function formatDuration(start: Date, end: Date | null): string {
 		if (!end) {
@@ -157,5 +112,11 @@
 
 	.role {
 		color: var(--accent);
+	}
+
+	.experience-link {
+		display: flex;
+		margin-top: auto;
+		text-decoration: none;
 	}
 </style>

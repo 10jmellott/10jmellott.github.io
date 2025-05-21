@@ -7,7 +7,12 @@
 	<div class="app">
 		<Header class="header" />
 		<main>
-			<router-view />
+			<transition
+				name="slide"
+				mode="out-in"
+			>
+				<router-view />
+			</transition>
 		</main>
 		<TreeBackground />
 	</div>
@@ -37,5 +42,33 @@
 		main {
 			padding: var(--padding);
 		}
+	}
+
+	/* Slide transition styles */
+	.slide-enter-active,
+	.slide-leave-active {
+		transition:
+			transform 0.3s cubic-bezier(0.55, 0, 0.1, 1),
+			opacity 0.3s;
+	}
+
+	.slide-enter-from {
+		transform: translateX(30px);
+		opacity: 0;
+	}
+
+	.slide-enter-to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	.slide-leave-from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	.slide-leave-to {
+		transform: translateX(-30px);
+		opacity: 0;
 	}
 </style>
