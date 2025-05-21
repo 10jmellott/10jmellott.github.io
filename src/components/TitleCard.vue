@@ -1,6 +1,6 @@
 <template>
 	<div class="title-card card">
-		<div>
+		<div v-if="title || subtitle">
 			<h2 class="title">{{ title }}</h2>
 			<p
 				class="subtitle"
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 	defineProps<{
-		title: string;
+		title?: string;
 		subtitle?: string;
 	}>();
 </script>

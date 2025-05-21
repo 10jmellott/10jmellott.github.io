@@ -27,9 +27,9 @@
 			padding: var(--padding);
 			top: 0;
 			z-index: 1;
-			background: var(--background);
 
 			@media (width <= 480px) {
+				background: var(--background);
 				padding: 0;
 			}
 		}
