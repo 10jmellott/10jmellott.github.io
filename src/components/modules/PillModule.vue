@@ -1,17 +1,11 @@
 <template>
 	<TitleCard :title>
-		<div class="container">
-			<p
-				v-for="pill in pills"
-				:key="pill"
-			>
-				{{ pill }}
-			</p>
-		</div>
+		<Pills :pills="pills" />
 	</TitleCard>
 </template>
 
 <script setup lang="ts">
+	import Pills from '../core/Pills.vue';
 	import TitleCard from '../TitleCard.vue';
 	defineProps<{
 		title: string;
