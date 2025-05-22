@@ -29,8 +29,20 @@
 	}
 }
 
-html {
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+html,
+body {
 	height: 100%;
+	background-color: var(--background);
 }
 
 body {
@@ -38,9 +50,11 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	background-color: var(--background);
 	color: var(--foreground);
 	line-height: normal;
+	height: 100%;
+	animation: fade-in 1s ease forwards;
+	animation-delay: 0.5s;
 }
 
 a {

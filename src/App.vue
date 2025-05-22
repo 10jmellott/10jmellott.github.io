@@ -32,15 +32,20 @@
 			padding: var(--padding);
 			top: 0;
 			z-index: 1;
-
-			@media (width <= 480px) {
-				background: var(--background);
-				padding: 0;
-			}
 		}
 
 		main {
 			padding: var(--padding);
+			margin: auto;
+		}
+
+		@media (width <= 480px) {
+			height: auto;
+
+			.header {
+				background: var(--background);
+				padding: 0 var(--padding);
+			}
 		}
 	}
 

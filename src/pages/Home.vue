@@ -1,6 +1,5 @@
 <script setup lang="ts">
-	import { ref, onMounted, onUnmounted } from 'vue';
-	import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+	import { ref, onMounted } from 'vue';
 	import Education from '../components/modules/Education.vue';
 	import Experience from '../components/modules/Experience.vue';
 	import Interests from '../components/modules/Interests.vue';
@@ -8,57 +7,30 @@
 	import Skills from '../components/modules/Skills.vue';
 	import Technologies from '../components/modules/Technologies.vue';
 	import Welcome from '../components/modules/Welcome.vue';
-	import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
-	// Add chevron visibility logic
-	const showChevron = ref(true);
-
-	// Add ref for grid layout
-	const gridRef = ref<HTMLElement | null>(null);
-
-	function handleScroll() {
-		showChevron.value = window.scrollY === 0;
-	}
-
-	// Scroll to grid layout when chevron is clicked
-	function scrollToGrid() {
-		if (gridRef.value) {
-			gridRef.value.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start',
-			});
-		}
-	}
+	/* Control floating text and grid visibility */
+	const showFloatingText = ref(true);
 
 	onMounted(() => {
-		window.addEventListener('scroll', handleScroll);
-	});
-	onUnmounted(() => {
-		window.removeEventListener('scroll', handleScroll);
+		setTimeout(() => {
+			showFloatingText.value = false;
+		}, 3000);
 	});
 </script>
 
 <template>
-	<Transition>
-		<div v-if="showChevron">
-			<FontAwesomeIcon
-				ref="chevron"
-				class="chevron clickable"
-				:icon="faChevronCircleDown"
-				@click="scrollToGrid"
-			/>
-			<div
-				class="floating-text"
-				v-if="showChevron"
-			>
-				<p class="floating-text-title">Joshua Mellott-Lillie</p>
-				<p class="floating-text-subtitle">Director, Web Technology</p>
-			</div>
+	<Transition name="fade">
+		<div
+			v-if="showFloatingText"
+			class="floating-text"
+		>
+			<p class="floating-text-title">Joshua Mellott-Lillie</p>
+			<p class="floating-text-subtitle">Director, Web Technology</p>
 		</div>
 	</Transition>
 	<div
+		v-if="!showFloatingText"
 		class="grid-layout"
-		ref="gridRef"
 	>
 		<Welcome class="module welcome" />
 		<Experience class="module experience" />
@@ -83,25 +55,13 @@
 		}
 	}
 
-	@keyframes bounce {
-		0%,
-		100% {
-			transform: translateY(0);
-		}
-
-		50% {
-			transform: translateY(-10px);
-		}
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity 0.5s;
 	}
 
-	/* we will explain what these classes do next! */
-	.v-enter-active,
-	.v-leave-active {
-		transition: opacity 0.5s ease;
-	}
-
-	.v-enter-from,
-	.v-leave-to {
+	.fade-enter-from,
+	.fade-leave-to {
 		opacity: 0;
 	}
 
@@ -109,9 +69,9 @@
 		position: fixed;
 		top: 30%;
 		left: 40%;
-		text-align: center;
+		text-align: right;
 		font-weight: 100;
-		line-height: 1;
+		line-height: 1.2;
 		text-transform: uppercase;
 
 		.floating-text-title {
@@ -137,15 +97,6 @@
 		}
 	}
 
-	.chevron {
-		position: fixed;
-		bottom: 1rem;
-		left: 50%;
-		font-size: 3rem;
-		color: var(--accent2);
-		animation: bounce 2s infinite ease-in-out;
-	}
-
 	.grid-layout {
 		display: grid;
 		grid-template-columns: 1fr 0.5fr 1fr;
@@ -155,8 +106,6 @@
 			'education latest-project latest-project'
 			'technologies latest-project latest-project'
 			'skills skills interests';
-		margin-top: calc(110vh - 128px);
-		margin-bottom: 10vh;
 		scroll-margin-top: calc(80px + var(--padding));
 
 		/* Mobile */
@@ -185,51 +134,51 @@
 	}
 
 	.module:nth-child(1) {
-		animation-delay: 0s;
-	}
-
-	.module:nth-child(2) {
-		animation-delay: 0.25s;
-	}
-
-	.module:nth-child(3) {
 		animation-delay: 0.5s;
 	}
 
-	.module:nth-child(4) {
+	.module:nth-child(2) {
 		animation-delay: 0.75s;
 	}
 
-	.module:nth-child(5) {
+	.module:nth-child(3) {
 		animation-delay: 1s;
 	}
 
-	.module:nth-child(6) {
+	.module:nth-child(4) {
 		animation-delay: 1.25s;
 	}
 
-	.module:nth-child(7) {
+	.module:nth-child(5) {
 		animation-delay: 1.5s;
 	}
 
-	.module:nth-child(8) {
+	.module:nth-child(6) {
 		animation-delay: 1.75s;
 	}
 
-	.module:nth-child(9) {
+	.module:nth-child(7) {
 		animation-delay: 2s;
 	}
 
-	.module:nth-child(10) {
+	.module:nth-child(8) {
 		animation-delay: 2.25s;
 	}
 
-	.module:nth-child(11) {
+	.module:nth-child(9) {
 		animation-delay: 2.5s;
 	}
 
-	.module:nth-child(12) {
+	.module:nth-child(10) {
 		animation-delay: 2.75s;
+	}
+
+	.module:nth-child(11) {
+		animation-delay: 3s;
+	}
+
+	.module:nth-child(12) {
+		animation-delay: 3.25s;
 	}
 
 	.welcome {

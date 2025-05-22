@@ -1,7 +1,7 @@
 <template>
 	<TitleCard
 		title="🚧Latest Project"
-		subtitle="https://www.mellott-lillie.com"
+		subtitle="www.mellott-lillie.com"
 	>
 		<div>
 			<img
@@ -12,9 +12,11 @@
 				alt="Latest project thumbnail"
 			/>
 			<span>
-				Redesigned and developed a personal website as a static web
-				application, optimizing performance and reliability. Hosted via
-				GitHub Pages for seamless deployment and accessibility.
+				<b>Developed and designed</b> this personal website as a static
+				web application, optimizing performance and reliability. Hosted
+				via <b>GitHub Pages</b> for seamless deployment and
+				accessibility. Finally the domain is provided by
+				<b>Cloudflare</b>, ensuring a fast and secure experience.
 			</span>
 		</div>
 		<RouterLink
@@ -43,7 +45,7 @@
 		border-radius: var(--border-radius);
 		box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
 		float: left;
-		margin-right: 12px;
+		margin-right: var(--padding);
 	}
 
 	.latest-project-link {
