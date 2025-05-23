@@ -1,3 +1,7 @@
+.glass {
+	backdrop-filter: blur(8px);
+}
+
 .card {
 	padding: var(--padding);
 	box-sizing: content-box;

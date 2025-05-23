@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header class="glass">
 		<Logo />
 		<nav>
 			<NavigationButton
@@ -35,10 +35,13 @@
 		display: flex;
 		align-items: center;
 		gap: var(--padding);
+		background: rgba(var(--background-values), 0.8);
+		padding: calc(var(--padding) / 2) var(--padding);
+		justify-content: space-between;
 
 		nav {
 			display: flex;
-			gap: 16px;
+			gap: var(--padding);
 			margin-left: auto;
 		}
 	}
