@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 	import accuweather from '../assets/accuweather.svg';
-	import TitleCard from '../components/TitleCard.vue';
+	import TitleCard from '../components/core/TitleCard.vue';
 	import HeaderCard from '../components/core/HeaderCard.vue';
 	import { formatDuration, asShortDate } from '../utils/dates';
 

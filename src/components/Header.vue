@@ -25,7 +25,7 @@
 <script setup lang="ts">
 	import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
 	import Logo from './icons/Logo.vue';
-	import NavigationButton from './NavigationButton.vue';
+	import NavigationButton from './core/NavigationButton.vue';
 	import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 </script>

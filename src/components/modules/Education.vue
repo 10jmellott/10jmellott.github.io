@@ -28,7 +28,6 @@
 						v-for="(degree, degreeIndex) in college.degrees"
 						:key="degreeIndex"
 						class="degrees-entry"
-						:class="{ subtitle: degree.minor }"
 					>
 						<p class="subtitle">
 							Graduated {{ formatDate(college.date) }}
@@ -45,7 +44,7 @@
 
 <script setup lang="ts">
 	import pennstate from '../../assets/pennstate.svg';
-	import TitleCard from '../TitleCard.vue';
+	import TitleCard from '../core/TitleCard.vue';
 
 	const education = [
 		{

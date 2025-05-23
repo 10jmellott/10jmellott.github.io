@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 	import Pills from '../core/Pills.vue';
-	import TitleCard from '../TitleCard.vue';
+	import TitleCard from '../core/TitleCard.vue';
 	defineProps<{
 		title: string;
 		pills: string[];

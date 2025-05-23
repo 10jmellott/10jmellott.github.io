@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 	import accuweather from '../../assets/accuweather.svg';
-	import TitleCard from '../TitleCard.vue';
+	import TitleCard from '../core/TitleCard.vue';
 	import { RouterLink } from 'vue-router';
 	import Button from '../core/Button.vue';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';

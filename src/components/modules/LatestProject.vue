@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-	import TitleCard from '../TitleCard.vue';
+	import TitleCard from '../core/TitleCard.vue';
 	import { RouterLink } from 'vue-router';
 	import Button from '../core/Button.vue';
 	import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal';
