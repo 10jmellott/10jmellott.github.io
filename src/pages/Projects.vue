@@ -8,20 +8,16 @@
 			:title="`${year.year}`"
 			class="year-title-card"
 		/>
-		<div
+		<ProjectMetaCard
 			v-for="project in year.projects"
 			:key="project.title"
-			class="project-row"
-		>
-			<ProjectMetaCard :project="project" />
-			<ProjectGalleryCard :images="project.images" />
-		</div>
+			:project
+		/>
 	</div>
 </template>
 
 <script setup lang="ts">
 	import ProjectMetaCard from '../components/modules/ProjectMetaCard.vue';
-	import ProjectGalleryCard from '../components/modules/ProjectGalleryCard.vue';
 	import HeaderCard from '../components/core/HeaderCard.vue';
 
 	const projects = [
@@ -32,7 +28,7 @@
 					title: 'Personal Website',
 					subtitle: 'Portfolio & Resume',
 					description:
-						'A statically generated site built with Vue 3, TypeScript, and Vite. Hosted on GitHub Pages.',
+						'<b>Developed and designed</b> this personal website as a static web application, optimizing performance and reliability. Hosted via <b>GitHub Pages</b> for seamless deployment and accessibility. Finally the domain is provided by <b>Cloudflare</b>, ensuring a fast and secure experience.',
 					technologies: [
 						'Vue.js',
 						'TypeScript',
@@ -43,7 +39,6 @@
 					code: 'https://github.com/10jmellott/10jmellott.github.io',
 					website: 'https://mellott-lillie.com',
 					images: ['/latest-project.webp'],
-					year: 2025,
 				},
 			],
 		},
@@ -66,23 +61,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--padding);
-
-		@media (width <= 800px) {
-			.project-row {
-				flex-direction: column;
-				gap: 16px;
-			}
-		}
 	}
 
 	.year-title-card {
 		margin-left: auto;
-	}
-
-	@media (width <= 800px) {
-		.project-row {
-			flex-direction: column;
-			gap: 16px;
-		}
 	}
 </style>

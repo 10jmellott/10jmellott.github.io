@@ -2,8 +2,13 @@
 	<TitleCard
 		:title="project.title"
 		:subtitle="project.subtitle"
+		:image="
+			project.images && project.images.length > 0
+				? project.images[0]
+				: undefined
+		"
 	>
-		<p>{{ project.description }}</p>
+		<p v-html="project.description"></p>
 		<Pills :pills="project.technologies" />
 		<div class="links">
 			<Button
@@ -38,6 +43,7 @@
 			technologies: string[];
 			code?: string;
 			website?: string;
+			images?: string[];
 		};
 	}>();
 </script>

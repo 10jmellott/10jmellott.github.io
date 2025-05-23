@@ -1,5 +1,6 @@
 <script setup lang="ts">
-	import p5 from 'p5';
+	// Use type import for p5
+	import type p5 from 'p5';
 	import { ref, onMounted } from 'vue';
 
 	// Defines a tree that may be drawn in the p5 framework
@@ -100,7 +101,9 @@
 
 	const canvas = ref<HTMLDivElement>();
 
-	onMounted(() => {
+	onMounted(async () => {
+		const p5Module = await import('p5');
+		const p5 = p5Module.default;
 		new p5((p: p5) => {
 			p.setup = () => setup(p);
 			p.draw = () => draw(p);
