@@ -1,25 +1,19 @@
 <template>
 	<div class="experience-page">
-		<div class="company-header">
-			<img
-				:src="company.logo"
-				alt="AccuWeather Logo"
-				width="48"
-				height="48"
-			/>
-			<div>
-				<a
-					:href="company.link"
-					target="_blank"
-					class="company-link"
-				>
-					{{ company.name }}
-				</a>
-				<p class="subtitle">
-					{{ overallDuration }}
-				</p>
-			</div>
-		</div>
+		<HeaderCard
+			:title="company.name"
+			:link="company.link"
+			:subtitle="overallDuration"
+		>
+			<template #icon>
+				<img
+					:src="company.logo"
+					:alt="`${company.name} Logo`"
+					width="48"
+					height="48"
+				/>
+			</template>
+		</HeaderCard>
 		<div class="roles-list">
 			<TitleCard
 				v-for="role in company.roles"
@@ -43,6 +37,7 @@
 <script setup lang="ts">
 	import accuweather from '../assets/accuweather.svg';
 	import TitleCard from '../components/TitleCard.vue';
+	import HeaderCard from '../components/core/HeaderCard.vue';
 	import { formatDuration, asShortDate } from '../utils/dates';
 
 	const company = {
