@@ -32,8 +32,8 @@ importers:
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.7.2)(vue@3.5.13(typescript@5.8.3))
       p5:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: ^2.0.2
+        version: 2.0.2
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -1388,8 +1388,8 @@ packages:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
 
-  p5@2.0.1:
-    resolution: {integrity: sha512-OLvuTaca4qN9188BCq6sFMzsfTctDZ6lbNXXoeCxOBjqg7WYQ4J1qHXbusJlj4CkdpUv/aIh4r+URcjUUI39Rw==}
+  p5@2.0.2:
+    resolution: {integrity: sha512-whgJRTVEtpYqYlM0t3Si/lkYSz0S2/jMReaodFKgWuwHrQmMmDT4ve7bcwqw2R42NWW6jq0WJFVnwV8OjADlEA==}
 
   pako@2.1.0:
     resolution: {integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==}
@@ -3324,7 +3324,7 @@ snapshots:
       p-limit: 3.1.0
     optional: true
 
-  p5@2.0.1:
+  p5@2.0.2:
     dependencies:
       '@davepagurek/bezier-path': 0.0.2
       '@japont/unicode-range': 1.0.0
