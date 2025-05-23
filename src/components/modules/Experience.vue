@@ -48,6 +48,7 @@
 	import { RouterLink } from 'vue-router';
 	import Button from '../core/Button.vue';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
+	import { formatDuration } from '../../utils/dates';
 
 	const career = [
 		{
@@ -57,32 +58,9 @@
 				'AccuWeather is a global leader in weather forecasting and services, providing superior accuracy for millions of users worldwide.',
 			logo: accuweather,
 			start: new Date(2014, 1),
-			end: null,
+			end: undefined,
 		},
 	];
-
-	function formatDuration(start: Date, end: Date | null): string {
-		if (!end) {
-			end = new Date();
-		}
-		const totalMonths =
-			(end.getFullYear() - start.getFullYear()) * 12 +
-			(end.getMonth() - start.getMonth());
-		const years = Math.floor(totalMonths / 12);
-		const months = totalMonths % 12;
-
-		let duration = '';
-		if (years > 0) {
-			duration += `${years} year${years > 1 ? 's' : ''}`;
-		}
-		if (months > 0) {
-			if (years > 0) {
-				duration += ' ';
-			}
-			duration += `${months} month${months > 1 ? 's' : ''}`;
-		}
-		return duration;
-	}
 </script>
 
 <style scoped>
@@ -117,6 +95,7 @@
 	.experience-link {
 		display: flex;
 		margin-top: auto;
+		margin-left: auto;
 		text-decoration: none;
 	}
 </style>

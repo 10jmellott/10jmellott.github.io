@@ -24,7 +24,7 @@
 	.title-card {
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
+		gap: var(--padding);
 
 		.subtitle {
 			margin-top: 8px;
