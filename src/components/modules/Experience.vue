@@ -29,26 +29,21 @@
 				<p>{{ job.description }}</p>
 			</div>
 		</div>
-		<RouterLink
-			class="experience-link"
+		<InternalButton
 			to="/experience"
-		>
-			<Button
-				:icon="faBriefcase"
-				text="Dive Into My Experience"
-				href="/experience"
-			/>
-		</RouterLink>
+			class="experience-link"
+			:icon="faBriefcase"
+			text="Dive Into My Experience"
+		/>
 	</TitleCard>
 </template>
 
 <script setup lang="ts">
 	import accuweather from '../../assets/accuweather.svg';
 	import TitleCard from '../core/TitleCard.vue';
-	import { RouterLink } from 'vue-router';
-	import Button from '../core/Button.vue';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 	import { formatDuration } from '../../utils/dates';
+	import InternalButton from '../core/InternalButton.vue';
 
 	const career = [
 		{

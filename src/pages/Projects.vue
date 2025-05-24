@@ -6,9 +6,10 @@
 	>
 		<HeaderCard
 			:title="`${year.year}`"
-			class="year-title-card"
+			class="year-title-card slide-in"
 		/>
 		<ProjectMetaCard
+			class="slide-in"
 			v-for="project in year.projects"
 			:key="project.title"
 			:project

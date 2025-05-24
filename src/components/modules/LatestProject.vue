@@ -19,24 +19,19 @@
 				<b>Cloudflare</b>, ensuring a fast and secure experience.
 			</span>
 		</div>
-		<RouterLink
+		<InternalButton
 			class="latest-project-link"
 			to="/projects"
-		>
-			<Button
-				:icon="faTerminal"
-				text="Discover My Work"
-				href="/projects"
-			/>
-		</RouterLink>
+			:icon="faTerminal"
+			text="Discover My Work"
+		/>
 	</TitleCard>
 </template>
 
 <script setup lang="ts">
 	import TitleCard from '../core/TitleCard.vue';
-	import { RouterLink } from 'vue-router';
-	import Button from '../core/Button.vue';
 	import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal';
+	import InternalButton from '../core/InternalButton.vue';
 </script>
 
 <style>

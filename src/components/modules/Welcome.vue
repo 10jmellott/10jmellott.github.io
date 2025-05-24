@@ -15,12 +15,13 @@
 				</p>
 			</div>
 			<div class="buttons">
-				<Button
+				<ExternalButton
 					v-for="button in buttons"
 					:key="button.text"
-					v-bind="button"
+					:href="button.href"
+					:text="button.text"
+					:icon="button.icon"
 					class="button"
-					external
 				/>
 			</div>
 		</div>
@@ -32,8 +33,8 @@
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 	import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 	import TitleCard from '../core/TitleCard.vue';
-	import Button from '../core/Button.vue';
 	import Profile from '../core/Profile.vue';
+	import ExternalButton from '../core/ExternalButton.vue';
 
 	const buttons = [
 		{

@@ -1,6 +1,7 @@
 <template>
 	<div class="experience-page">
 		<HeaderCard
+			class="slide-in"
 			:title="company.name"
 			:link="company.link"
 			:subtitle="overallDuration"
@@ -14,23 +15,22 @@
 				/>
 			</template>
 		</HeaderCard>
-		<div class="roles-list">
-			<TitleCard
-				v-for="role in company.roles"
-				:key="role.title"
-				:title="role.title"
-				:subtitle="`${asShortDate(role.start)} - ${role.end ? asShortDate(role.end) : 'present'} | ${formatDuration(role.start, role.end)}`"
-			>
-				<ul class="role-description">
-					<li
-						v-for="(desc, index) in role.description"
-						:key="index"
-						class="bullet-point"
-						v-html="desc"
-					></li>
-				</ul>
-			</TitleCard>
-		</div>
+		<TitleCard
+			v-for="role in company.roles"
+			class="slide-in"
+			:key="role.title"
+			:title="role.title"
+			:subtitle="`${asShortDate(role.start)} - ${role.end ? asShortDate(role.end) : 'present'} | ${formatDuration(role.start, role.end)}`"
+		>
+			<ul class="role-description">
+				<li
+					v-for="(desc, index) in role.description"
+					:key="index"
+					class="bullet-point"
+					v-html="desc"
+				></li>
+			</ul>
+		</TitleCard>
 	</div>
 </template>
 
@@ -84,21 +84,8 @@
 	.experience-page {
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
-		max-width: 700px;
+		gap: var(--padding);
 		margin: 0 auto;
-	}
-
-	.company-header {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
-
-	.company-link {
-		font-size: 2rem;
-		color: var(--accent2);
-		font-weight: bold;
 	}
 
 	.roles-list {
@@ -118,10 +105,5 @@
 			margin-left: calc(var(--padding) * 3 / 4);
 			padding-left: calc(var(--padding) / 4);
 		}
-	}
-
-	.overall-duration {
-		font-weight: bold;
-		font-size: 1.2rem;
 	}
 </style>

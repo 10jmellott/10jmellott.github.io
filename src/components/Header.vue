@@ -9,6 +9,11 @@
 				selected
 			/>
 			<NavigationButton
+				to="/me"
+				text="Me"
+				:icon="faIdCard"
+			/>
+			<NavigationButton
 				to="/projects"
 				text="Projects"
 				:icon="faTerminal"
@@ -28,6 +33,7 @@
 	import NavigationButton from './core/NavigationButton.vue';
 	import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
+	import { faIdCard } from '@fortawesome/free-solid-svg-icons/faIdCard';
 </script>
 
 <style scoped>

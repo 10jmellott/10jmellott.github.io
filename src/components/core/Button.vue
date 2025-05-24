@@ -1,32 +1,25 @@
 <script setup lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-	import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-	import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons/faUpRightFromSquare';
+	import { type IconDefinition } from '@fortawesome/fontawesome-svg-core';
 	defineProps<{
-		href: string;
 		icon: IconDefinition;
+		postIcon?: IconDefinition;
 		text: string;
-		external?: boolean;
 	}>();
 </script>
 
 <template>
-	<a
-		class="button"
-		:href
-		target="_blank"
-	>
+	<div class="button clickable">
 		<FontAwesomeIcon
 			class="icon"
 			:icon
 		/>
 		<span>{{ text }}</span>
 		<FontAwesomeIcon
-			v-if="external"
-			class="external-icon"
-			:icon="faUpRightFromSquare"
+			v-if="postIcon"
+			:icon="postIcon"
 		/>
-	</a>
+	</div>
 </template>
 
 <style scoped>
@@ -43,11 +36,6 @@
 
 		.icon {
 			font-size: 1.25rem;
-		}
-
-		.external-icon {
-			font-size: 0.75rem;
-			margin-left: auto;
 		}
 
 		span {

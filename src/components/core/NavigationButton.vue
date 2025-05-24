@@ -1,6 +1,6 @@
 <template>
 	<router-link
-		class="navigation-button"
+		class="navigation-button clickable"
 		activeClass="selected"
 		:to
 	>
@@ -28,7 +28,6 @@
 		justify-content: center;
 		gap: 16px;
 		font-size: 1.5rem;
-		cursor: pointer;
 		transition: color var(--transition);
 		color: white;
 		font-weight: normal;

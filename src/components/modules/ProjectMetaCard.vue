@@ -11,17 +11,16 @@
 		<p v-html="project.description"></p>
 		<Pills :pills="project.technologies" />
 		<div class="links">
-			<Button
+			<ExternalButton
 				v-if="project.code"
 				:href="project.code"
 				:icon="faGithub"
 				text="Code"
-				external
 			/>
-			<Button
+			<ExternalButton
 				v-if="project.website"
 				:href="project.website"
-				:icon="faUpRightFromSquare"
+				:icon="faGlobe"
 				text="Website"
 				external
 			/>
@@ -32,9 +31,9 @@
 <script setup lang="ts">
 	import TitleCard from '../core/TitleCard.vue';
 	import Pills from '../core/Pills.vue';
-	import Button from '../core/Button.vue';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
-	import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons/faUpRightFromSquare';
+	import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+	import ExternalButton from '../core/ExternalButton.vue';
 	defineProps<{
 		project: {
 			title: string;
