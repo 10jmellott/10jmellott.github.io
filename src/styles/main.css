@@ -1,0 +1,65 @@
+@import url('reset.css');
+@import url('atoms.css');
+@import url('animations.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+	/* Colors */
+	--background: #121113;
+	--background-values: 18, 17, 19;
+	--foreground: #f7f7f2;
+	--accent: #899878;
+	--accent2: #f06543;
+	--foreground-alt: #e4e6c3;
+	--background-alt: #222725;
+
+	/* Theme */
+	--card-background: var(--background-alt);
+
+	/* Font */
+	--font-family: 'Roboto Mono', sans-serif;
+
+	/* Spacing */
+	--site-width: 1280px;
+	--padding: 24px;
+	--border-radius: 8px;
+
+	/* Transition */
+	--transition: 0.2s ease;
+
+	@media (width <= 768px) {
+		--padding: 12px;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+html,
+body {
+	height: 100%;
+	background-color: var(--background);
+}
+
+body {
+	font-family: var(--font-family);
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--foreground);
+	line-height: normal;
+	height: 100%;
+	animation: fade-in 1s ease forwards;
+	animation-delay: 0.5s;
+}
+
+a {
+	text-decoration: none;
+}

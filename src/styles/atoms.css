@@ -1,0 +1,36 @@
+.glass {
+	backdrop-filter: blur(8px);
+}
+
+.card {
+	padding: var(--padding);
+	box-sizing: content-box;
+	border-radius: var(--border-radius);
+	background-color: #222725cc;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 8px rgb(0 0 0 / 40%);
+	transition: border-color var(--transition);
+}
+
+.title {
+	font-size: 1.25rem;
+	letter-spacing: 0.25rem;
+	text-transform: lowercase;
+}
+
+.subtitle {
+	font-size: 0.75rem;
+	opacity: 0.75;
+	font-style: italic;
+}
+
+a,
+b {
+	color: var(--accent2);
+	font-weight: bold;
+	line-height: 1;
+}
+
+.clickable {
+	cursor: pointer;
+}
