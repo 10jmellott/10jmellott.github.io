@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import Header from './components/Header.vue';
-	import TreeBackground from './components/core/TreeBackground.vue';
+	import TreeBackground from './components/modules/TreeBackground.vue';
 </script>
 
 <template>
