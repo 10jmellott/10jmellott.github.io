@@ -1,6 +1,8 @@
 <template>
 	<header class="glass">
-		<Logo />
+		<router-link to="/">
+			<Logo />
+		</router-link>
 		<nav>
 			<NavigationButton
 				to="/"
@@ -49,6 +51,14 @@
 			display: flex;
 			gap: var(--padding);
 			margin-left: auto;
+
+			@media (width < 425px) {
+				gap: 0;
+
+				:first-child {
+					display: none;
+				}
+			}
 		}
 	}
 </style>

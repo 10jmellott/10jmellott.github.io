@@ -49,6 +49,7 @@
 		border-radius: 0 var(--border-radius) var(--border-radius) 0;
 		margin: calc(-1 * var(--padding));
 		object-fit: cover;
+		margin-left: var(--padding);
 	}
 
 	.subtitle {
@@ -62,9 +63,12 @@
 
 		.title-card-image {
 			max-width: none;
+			width: calc(100% + 2 * var(--padding));
 			max-height: 320px;
 			border-radius: 0 0 var(--border-radius) var(--border-radius);
 			margin-top: 0;
+			margin-left: calc(-1 * var(--padding));
+			margin-right: calc(-1 * var(--padding));
 		}
 	}
 </style>

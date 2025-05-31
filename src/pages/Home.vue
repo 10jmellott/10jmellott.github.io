@@ -29,6 +29,7 @@
 		flex-direction: column;
 		align-items: flex-end;
 		gap: var(--padding);
+		padding: var(--padding);
 
 		.floating-text-title {
 			font-size: 4vw;
@@ -38,17 +39,17 @@
 			font-size: 2vw;
 		}
 
-		@media (width <= 1024px) {
+		@media (width < 1024px) {
 			top: 20%;
 			left: 1rem;
 			right: 1rem;
 
 			.floating-text-title {
-				font-size: 40px;
+				font-size: 36px;
 			}
 
 			.floating-text-subtitle {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 	}

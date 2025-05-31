@@ -8,7 +8,7 @@
 				class="latest-project-thumb"
 				height="180"
 				width="180"
-				src="/latest-project.webp"
+				src="/projects/website.webp"
 				alt="Latest project thumbnail"
 			/>
 			<span>
