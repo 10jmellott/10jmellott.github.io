@@ -5,11 +5,11 @@
 
 <template>
 	<div class="app">
+		<TreeBackground />
 		<Header class="header" />
 		<main>
 			<router-view />
 		</main>
-		<TreeBackground />
 	</div>
 </template>
 
@@ -24,13 +24,14 @@
 		.header {
 			position: sticky;
 			top: 0;
-			z-index: 1;
+			z-index: 2;
 		}
 
 		main {
 			padding: var(--padding);
 			margin: auto;
 			max-width: var(--site-width);
+			z-index: 1;
 		}
 
 		@media (width <= 480px) {

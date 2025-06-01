@@ -135,7 +135,6 @@
 
 <style>
 	.tree-background {
-		z-index: -1;
 		position: fixed;
 		inset: 0;
 		display: block;
