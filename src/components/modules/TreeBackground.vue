@@ -111,15 +111,6 @@
 		animationFrameId = requestAnimationFrame(draw);
 	}
 
-	function handleResize() {
-		const canvas = canvasRef.value;
-		if (!canvas) return;
-		resizeCanvas(canvas);
-		const ctx = canvas.getContext('2d');
-		if (!ctx) return;
-		setupTree(ctx, canvas);
-	}
-
 	onMounted(() => {
 		const canvas = canvasRef.value;
 		if (!canvas) return;
@@ -127,12 +118,10 @@
 		const ctx = canvas.getContext('2d');
 		if (!ctx) return;
 		setupTree(ctx, canvas);
-		window.addEventListener('resize', handleResize);
 		draw();
 	});
 
 	onBeforeUnmount(() => {
-		window.removeEventListener('resize', handleResize);
 		cancelAnimationFrame(animationFrameId);
 	});
 </script>
@@ -148,8 +137,6 @@
 	.tree-background {
 		z-index: -1;
 		position: fixed;
-		width: 100%;
-		height: 100%;
 		inset: 0;
 		display: block;
 	}
