@@ -15,7 +15,8 @@
 		".gitattributes": true,
 		".gitignore": true,
 		".gitconfig": true,
-		"tsconfig*.json": true
+		"tsconfig*.json": true,
+		"CNAME": true
 	},
 	"prettier.configPath": "prettier.config.js",
 	"prettier.ignorePath": ".prettierignore",
