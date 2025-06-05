@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-	import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-	import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+	import FontAwesomeIcon from '../icons/FontAwesomeIcon.vue';
+	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 	defineProps<{
 		to: string;

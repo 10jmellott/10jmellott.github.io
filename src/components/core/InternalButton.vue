@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
 	import { faCircleChevronRight } from '@fortawesome/free-solid-svg-icons/faCircleChevronRight';
 	import Button from './Button.vue';
 	defineProps<{

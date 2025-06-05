@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-	import { type IconDefinition } from '@fortawesome/fontawesome-svg-core';
+	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
+	import FontAwesomeIcon from '../icons/FontAwesomeIcon.vue';
 	defineProps<{
 		icon: IconDefinition;
 		postIcon?: IconDefinition;
