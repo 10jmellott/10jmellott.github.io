@@ -1,6 +1,6 @@
 <template>
 	<img
-		src="/profile.jpg"
+		src="/profile.webp"
 		width="96"
 		height="96"
 		:alt="`Profile of Joshua`"
