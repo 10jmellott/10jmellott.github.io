@@ -28,7 +28,6 @@
 		justify-content: center;
 		gap: 16px;
 		font-size: 1.5rem;
-		transition: color var(--transition);
 		color: white;
 		font-weight: normal;
 		min-width: 80px;
@@ -37,6 +36,7 @@
 			font-size: 0.8rem;
 			text-transform: lowercase;
 			padding: 4px 8px;
+			font-weight: bold;
 		}
 
 		&.selected {
@@ -44,10 +44,9 @@
 
 			p {
 				background-color: var(--accent);
-				color: var(--foreground);
+				color: var(--background);
 				border-radius: 16px;
 				padding: 4px 8px;
-				transition: background-color var(--transition);
 			}
 
 			&:hover {

@@ -1,6 +1,9 @@
 <template>
 	<header class="glass">
-		<router-link to="/">
+		<router-link
+			to="/"
+			aria-label="Home"
+		>
 			<Logo />
 		</router-link>
 		<nav>
