@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	import Header from './components/Header.vue';
 	import TreeBackground from './components/modules/TreeBackground.vue';
+	import RouterView from './components/routing/RouterView.vue';
 </script>
 
 <template>
@@ -8,7 +9,7 @@
 		<TreeBackground />
 		<Header class="header" />
 		<main>
-			<router-view />
+			<RouterView />
 		</main>
 	</div>
 </template>

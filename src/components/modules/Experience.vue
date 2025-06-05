@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<InternalButton
-			to="/experience"
+			to="experience"
 			class="experience-link"
 			:icon="faBriefcase"
 			text="Dive Into My Experience"

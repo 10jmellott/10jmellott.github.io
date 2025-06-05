@@ -1,30 +1,30 @@
 <template>
 	<header class="glass">
-		<router-link
-			to="/"
+		<RouterLink
+			to=""
 			aria-label="Home"
 		>
 			<Logo />
-		</router-link>
+		</RouterLink>
 		<nav>
 			<NavigationButton
-				to="/"
+				to=""
 				text="Home"
 				:icon="faHome"
 				selected
 			/>
 			<NavigationButton
-				to="/me"
+				to="me"
 				text="Me"
 				:icon="faIdCard"
 			/>
 			<NavigationButton
-				to="/projects"
+				to="projects"
 				text="Projects"
 				:icon="faTerminal"
 			/>
 			<NavigationButton
-				to="/experience"
+				to="experience"
 				text="Experience"
 				:icon="faBriefcase"
 			/>
@@ -39,6 +39,7 @@
 	import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal';
 	import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 	import { faIdCard } from '@fortawesome/free-solid-svg-icons/faIdCard';
+	import RouterLink from './routing/RouterLink.vue';
 </script>
 
 <style scoped>

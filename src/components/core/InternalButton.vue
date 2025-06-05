@@ -1,4 +1,5 @@
 <script setup lang="ts">
+	import RouterLink from '../routing/RouterLink.vue';
 	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
 	import { faCircleChevronRight } from '@fortawesome/free-solid-svg-icons/faCircleChevronRight';
 	import Button from './Button.vue';

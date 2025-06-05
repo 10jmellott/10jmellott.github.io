@@ -11,7 +11,7 @@
 			class="slide-in"
 			:icon="faIdCard"
 			text="See My Journey"
-			to="/me"
+			to="me"
 			cta
 		/>
 	</div>

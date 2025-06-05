@@ -1,17 +1,17 @@
 <template>
-	<router-link
+	<RouterLink
 		class="navigation-button clickable"
-		activeClass="selected"
 		:to
 	>
 		<FontAwesomeIcon :icon />
 		<p>{{ text }}</p>
-	</router-link>
+	</RouterLink>
 </template>
 
 <script setup lang="ts">
 	import FontAwesomeIcon from '../icons/FontAwesomeIcon.vue';
 	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
+	import RouterLink from '../routing/RouterLink.vue';
 
 	defineProps<{
 		to: string;
@@ -39,7 +39,7 @@
 			font-weight: bold;
 		}
 
-		&.selected {
+		&.active {
 			color: var(--accent);
 
 			p {

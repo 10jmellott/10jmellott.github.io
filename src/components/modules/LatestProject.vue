@@ -21,7 +21,7 @@
 		</div>
 		<InternalButton
 			class="latest-project-link"
-			to="/projects"
+			to="projects"
 			:icon="faTerminal"
 			text="Discover My Work"
 		/>
