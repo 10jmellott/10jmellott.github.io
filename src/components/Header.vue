@@ -47,7 +47,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--padding);
-		background: rgba(var(--background-values), 0.8);
+		background: rgb(var(--background-values), 0.8);
 		padding: calc(var(--padding) / 2) var(--padding);
 		justify-content: space-between;
 
