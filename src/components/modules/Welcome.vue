@@ -8,10 +8,10 @@
 				<Profile />
 				<p>
 					I am <b>Joshua Mellott-Lillie</b>, the
-					<b>Director of Web Technology</b> at AccuWeather. With over
+					<b>Director of Technology Innovation</b> at AccuWeather. With over
 					a decade of experience in development, I have a passion for
-					creating beautiful, functional, and accessible web
-					applications.
+					creating beautiful, functional, and accessible applications and
+					services.
 				</p>
 			</div>
 			<div class="buttons">

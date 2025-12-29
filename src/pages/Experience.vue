@@ -46,8 +46,18 @@
 		link: 'https://www.accuweather.com/',
 		roles: [
 			{
+				title: 'Director, Technology Innovation',
+				start: new Date(2025, 9), // Sept 2025
+				description: [
+					'Leads the innovation development efforts for applications across <b>multiple lines of business</b>.',
+					'Oversees architectural design and prototypes of <b>interactive systems</b>.',
+					'Collaborates with <b>cross-functional teams</b> to enhance application features.',
+				],
+			},
+			{
 				title: 'Director, Web Technology',
 				start: new Date(2024, 3), // Apr 2024
+				end: new Date(2025, 9), // Sept 2025
 				description: [
 					'Leads the web technology teams to deliver robust weather applications across <b>multiple lines of business</b>.',
 					'Oversees architectural design and development of <b>interactive systems</b>.',

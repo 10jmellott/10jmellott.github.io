@@ -6,7 +6,7 @@
 <template>
 	<div class="floating-text">
 		<p class="floating-text-title slide-in">Joshua Mellott-Lillie</p>
-		<p class="floating-text-subtitle slide-in">Director, Web Technology</p>
+		<p class="floating-text-subtitle slide-in">Director, Technology Innovation</p>
 		<InternalButton
 			class="slide-in"
 			:icon="faIdCard"

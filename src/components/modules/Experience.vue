@@ -1,7 +1,7 @@
 <template>
 	<TitleCard
 		title="💼Experience"
-		subtitle="Director, Web Technology at AccuWeather"
+		subtitle="Director, Technology Innovation at AccuWeather"
 	>
 		<div class="experience-module">
 			<div
