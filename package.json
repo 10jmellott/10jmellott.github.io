@@ -22,7 +22,7 @@
 		"@vitejs/plugin-vue": "^5.2.4",
 		"rollup-plugin-visualizer": "^6.0.5",
 		"typescript": "^5.9.3",
-		"vite": "^6.4.1",
+		"vite": "^6.4.2",
 		"vue-tsc": "^2.2.12"
 	},
 	"optionalDependencies": {
