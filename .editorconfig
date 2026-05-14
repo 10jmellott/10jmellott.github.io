@@ -11,6 +11,6 @@ trim_trailing_whitespace = true
 charset = utf-8
 indent_style = tab
 
-[*.{md,yml}]
+[*.{md,yml,yaml}]
 trim_trailing_whitespace = false
 indent_style = space
